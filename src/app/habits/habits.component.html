@@ -1,0 +1,22 @@
+<!-- Display object -->
+<div class="habit">
+  <!-- UppercasePipe: pipe operator ( | ):
+  * Pipes are a good way to
+  ** format strings,
+  ** currency amounts,
+  ** dates and other display data-->
+  <h2>{{habit.name | uppercase}}</h2>
+  <div><span>ID: </span>{{habit.id}}</div>
+  <div>
+    <label>Habit :
+      <!-- Apps stops working
+      ** because 'ngModel' isn't a known property of 'input'
+      * ngModel is a valid Angular directive,
+      ** but it isn't available by default
+      ** because it belongs to the optional FormsModule,
+      ** which is why you must opt-in to using it.-->
+      <input [(ngModel)]="habit.name" placeholder="Insert your habit here"/>
+    </label>
+    </div>
+  </div>
+<!--{{habit}}= wrong, because cannot show whole object -->
