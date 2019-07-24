@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 
 import { HabitsComponent } from './habits/habits.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HabitsComponent
+    HabitsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
