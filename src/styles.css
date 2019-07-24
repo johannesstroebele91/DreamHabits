@@ -5,22 +5,25 @@ html, body {
   height: 100%;
 }
 body {
-  margin: 2em; /* Reset later to margin: 0; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 46%;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 /* Application-wide Styles */
 h1 {
-  color: #369;
+  line-height: 0.5em;
+  color: #283593;
   font-size: 250%;
 }
 h2, h3 {
-  color: #444;
+  color: #283593;
 }
 body {
 
 }
 body, input[type="text"], button {
-  color: #333;
+  color: #283593;
 }
 /* everywhere else */
