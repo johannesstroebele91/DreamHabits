@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 /* Import the class 'Habit' */
 import { Habit } from '../habit';
+import { HABITS } from '../mock-habits';
+
 
 @Component({
   selector: 'app-habits',
@@ -15,9 +17,22 @@ export class HabitsComponent implements OnInit {
     name: 'Sample'
   };
 
+  /* Definition of component property called "habits"
+  * to expose the "HABITS" array from the server
+  * for binding. */
+  habits = HABITS;
+
+  selectedHabit: Habit;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  /* Assigment of the clicked habit from the template
+  * to the component's selectedHabit*/
+  onSelect(habit: Habit): void {
+    this.selectedHabit = habit;
+
+  }
 }
