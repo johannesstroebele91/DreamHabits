@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { HabitsComponent } from './habits/habits.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { HabitDetailComponent } from './habit-detail/habit-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HabitsComponent,
-    HeaderComponent
+    HeaderComponent,
+    HabitDetailComponent
   ],
   imports: [
     BrowserModule,

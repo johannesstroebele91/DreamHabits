@@ -1,0 +1,18 @@
+<!-- Only when the users picks a habit
+* the selectedHabit becomes a value
+* therefore it will not be displayed from the start -->
+<div *ngIf="habit" class="habit-bg">
+  <!-- Display object -->
+  <!-- UppercasePipe: pipe operator ( | ) -->
+  <h2>{{habit.name | uppercase}}</h2>
+  <div><span>ID: </span>{{habit.id}}</div>
+  <div>
+    <label>Habit :
+      <!-- ngModel creates an input field
+      * PS: Additional directives like ngModel
+      * need to be imported in app.module.ts-->
+      <input [(ngModel)]="habit.name" placeholder="Insert your habit here"/>
+    </label>
+  </div>
+</div>
+<!--{{habit}}= wrong, because cannot show whole object -->
