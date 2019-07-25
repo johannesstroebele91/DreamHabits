@@ -1,9 +1,9 @@
 # DreamHabits
-Create a list of habits that you dream of having. Web web application build with with Angular Material.
+Create a list of habits that you dream of having. Frontend build with Angular Material.
 
 ## What I Learned
 * Setting up a Angular web application
-* Working with Angular components and themes
+* Working with Angular themes, components, directives, and serices. 
 
 ## Versions
 ### Current Version
@@ -12,5 +12,6 @@ Create a list of habits that you dream of having. Web web application build with
 
 ### Next Version
 * enabling progress toggle buttons
+* enabling sorting
 * improving the design
 * saving user information
