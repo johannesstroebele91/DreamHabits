@@ -3,7 +3,9 @@
 .habits {
   list-style-type: none;
   padding: 0;
-  maxi-width: 32em;
+}
+.habits ul{
+  max-width: 64%;
 }
 .habits li {
   cursor: pointer;

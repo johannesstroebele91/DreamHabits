@@ -11,12 +11,6 @@ import { HabitService } from '../habit.service';
 })
 export class HabitsComponent implements OnInit {
 
-  /* Creating an Object 'habit' based on the Class = 'Habit */
-  habit: Habit = {
-    id: 1,
-    name: 'Sample'
-  };
-
   selectedHabit: Habit;
 
   habits: Habit[];
@@ -33,12 +27,14 @@ export class HabitsComponent implements OnInit {
     this.selectedHabit = habit;
   }
 
-  /*will not work in a real app,
-  * because only mock objects (synchron vs asynchron)
-  * -> observable service*/
   getHabits(): void {
-    this.habits = this.habitService.getHabits();
-
+    /* Will not work in a real app,
+    * because only mock objects (synchron vs asynchron)
+    * -> observable service
+    this.habits = this.habitService.getHabits();*/
+    this.habitService.getHabits()
+      .subscribe(habits => this.habits = habits);
   }
+
 
 }
