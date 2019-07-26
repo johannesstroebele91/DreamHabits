@@ -8,6 +8,10 @@
   right: 0;
 }
 
+.mat-sidenav{
+  padding: 0 4em 0 2em;
+  margin-right: 2em;
+}
 .example-is-mobile .example-toolbar {
   position: fixed;
   /* Make sure the toolbar will stay on top of the content as it scrolls past. */
@@ -19,6 +23,9 @@ h1.example-app-name {
   color: white;
 }
 
+.mat-sidenav-content {
+  margin: 4em;
+}
 .example-sidenav-container {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */

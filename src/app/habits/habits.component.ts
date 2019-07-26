@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 /* Import the class 'Habit' */
 import { Habit } from '../habit';
-import { HabitService } from '../habit.service';
+import { HabitService } from '../../services/habit.service';
 
 
 @Component({
@@ -11,7 +11,8 @@ import { HabitService } from '../habit.service';
 })
 export class HabitsComponent implements OnInit {
 
-  selectedHabit: Habit;
+  /* Routing replaces use case for selectedHero property
+  selectedHabit: Habit; */
 
   habits: Habit[];
 
@@ -21,11 +22,14 @@ export class HabitsComponent implements OnInit {
     this.getHabits();
   }
 
-  /* Assigment of the clicked habit from the template
-  * to the component's selectedHabit*/
+  /* Routing replaces use case for onSelect()
+
+  * Assigment of the clicked habit from the template
+  ** to the component's selectedHabit
+
   onSelect(habit: Habit): void {
     this.selectedHabit = habit;
-  }
+  } */
 
   getHabits(): void {
     /* Will not work in a real app,

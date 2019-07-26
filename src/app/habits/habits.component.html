@@ -1,12 +1,24 @@
 <h2>My habits</h2>
+<p>Which habits do your dream of having?
+  Adapt the list down below to your needs.</p>
 <ul class="habits">
   <!-- *ngFor inserts a list of objects -->
   <!-- (click)="onSelect(habit) -> onSelect() method needs to be defined in the habits.component.ts -->
+  <li *ngFor="let habit of habits">
+    <a routerLink="/detail/{{habit.id}}">
+      <span class="badge">{{habit.id}}</span> {{habit.name}}
+    </a>
+  </li>
+
+<!-- Routing replaces this code with onSelect() & selectedHero property
   <li *ngFor="let habit of habits"
       [class.selected]="habit === selectedHabit"
       (click)="onSelect(habit)">
-    <span class ="badge">{{habit.id}}</span> {{habit.name}}
-  </li>
+      <span class ="badge">{{habit.id}}</span> {{habit.name}}
+  </li> -->
 </ul>
 
+<!-- Delete habit details from the HabitsComponent
+* by enabling routing to the HabitDetailComponent
 <app-habit-detail [habit]="selectedHabit"></app-habit-detail>
+-->

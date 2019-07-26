@@ -1,35 +1,38 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-/* HabitsComponent's private CSS styles */
 .habits {
+  margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-}
-.habits ul{
-  max-width: 64%;
+  width: 15em;
 }
 .habits li {
-  cursor: pointer;
   position: relative;
-  left: 0;
-  background-color: #D3D7F3;
+  cursor: pointer;
+  background-color: #EEE;
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
   border-radius: 4px;
 }
+
 .habits li:hover {
-  color: #fff;
-  background-color: #283593;
+  color: #607D8B;
+  background-color: #DDD;
   left: .1em;
 }
-.habits li.selected {
-  background-color: #929EF5;
-  color: white;
+
+.habits a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 250px;
 }
-.habits li.selected:hover {
-  background-color: #283593;
-  color: white;
+
+.habits a:hover {
+  color:#607D8B;
 }
+
 .habits .badge {
   display: inline-block;
   font-size: small;
@@ -41,6 +44,8 @@
   left: -1px;
   top: -4px;
   height: 1.8em;
+  min-width: 16px;
+  text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
