@@ -1,5 +1,5 @@
 # DreamHabits
-Create a list of habits that you dream of having. Frontend build with Angular Material.
+Create a list of habits that you dream of having. This web app was build with Angular Material.
 
 ## What I Learned
 * Setting up a Angular web application 
