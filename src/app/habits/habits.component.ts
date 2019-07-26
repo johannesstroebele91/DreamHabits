@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 /* Import the class 'Habit' */
 import { Habit } from '../habit';
-import { HABITS } from '../mock-habits';
+import { HabitService } from '../habit.service';
 
 
 @Component({
@@ -11,28 +11,30 @@ import { HABITS } from '../mock-habits';
 })
 export class HabitsComponent implements OnInit {
 
-  /* Creating an Object 'habit' based on the Class = 'Habit */
-  habit: Habit = {
-    id: 1,
-    name: 'Sample'
-  };
-
-  /* Definition of component property called "habits"
-  * to expose the "HABITS" array from the server
-  * for binding. */
-  habits = HABITS;
-
   selectedHabit: Habit;
 
-  constructor() { }
+  habits: Habit[];
+
+  constructor(private habitService: HabitService) { }
 
   ngOnInit() {
+    this.getHabits();
   }
 
   /* Assigment of the clicked habit from the template
   * to the component's selectedHabit*/
   onSelect(habit: Habit): void {
     this.selectedHabit = habit;
-
   }
+
+  getHabits(): void {
+    /* Will not work in a real app,
+    * because only mock objects (synchron vs asynchron)
+    * -> observable service
+    this.habits = this.habitService.getHabits();*/
+    this.habitService.getHabits()
+      .subscribe(habits => this.habits = habits);
+  }
+
+
 }

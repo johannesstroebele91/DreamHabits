@@ -1,25 +1,6 @@
-<!-- Only when the users picks a habit
-* the selectedHabit becomes a value
-* therefore it will not be displayed from the start -->
-<div *ngIf="selectedHabit" class="habit-bg">
-  <!-- Display object -->
-  <!-- UppercasePipe: pipe operator ( | ) -->
-  <h2>{{selectedHabit.name | uppercase}}</h2>
-  <div><span>ID: </span>{{selectedHabit.id}}</div>
-  <div>
-    <label>Habit :
-    <!-- ngModel creates an input field
-    * PS: Additional directives like ngModel
-    * need to be imported in app.module.ts-->
-      <input [(ngModel)]="selectedHabit.name" placeholder="Insert your habit here"/>
-    </label>
-  </div>
-</div>
-  <!--{{habit}}= wrong, because cannot show whole object -->
-
 <h2>My habits</h2>
 <ul class="habits">
-<!-- *ngFor inserts a list of objects -->
+  <!-- *ngFor inserts a list of objects -->
   <!-- (click)="onSelect(habit) -> onSelect() method needs to be defined in the habits.component.ts -->
   <li *ngFor="let habit of habits"
       [class.selected]="habit === selectedHabit"
@@ -27,3 +8,5 @@
     <span class ="badge">{{habit.id}}</span> {{habit.name}}
   </li>
 </ul>
+
+<app-habit-detail [habit]="selectedHabit"></app-habit-detail>
