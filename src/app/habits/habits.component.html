@@ -1,6 +1,16 @@
 <h2>My habits</h2>
 <p>Which habits do your dream of having?
   Adapt the list down below to your needs.</p>
+<div>
+  <label>Insert new habit here:
+<input #habitName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(habitName.value); habitName.value=''">
+    add
+  </button>
+</div>
+
 <ul class="habits">
   <!-- *ngFor inserts a list of objects -->
   <!-- (click)="onSelect(habit) -> onSelect() method needs to be defined in the habits.component.ts -->
@@ -8,6 +18,8 @@
     <a routerLink="/detail/{{habit.id}}">
       <span class="badge">{{habit.id}}</span> {{habit.name}}
     </a>
+    <button class="delete" title="delete hero"
+            (click)="delete(habit)">x</button>
   </li>
 
 <!-- Routing replaces this code with onSelect() & selectedHero property

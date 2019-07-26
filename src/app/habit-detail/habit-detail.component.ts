@@ -38,4 +38,9 @@ export class HabitDetailComponent implements OnInit {
     this.location.back();
   }
 
+    save(): void {
+    this.habitService.updateHabit(this.habit)
+      .subscribe(() => this.goBack());
+  }
+
 }
