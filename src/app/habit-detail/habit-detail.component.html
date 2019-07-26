@@ -4,6 +4,7 @@
 <div *ngIf="habit" class="habit-bg">
   <!-- Display object -->
   <!-- UppercasePipe: pipe operator ( | ) -->
+  <button (click)="goBack()">go back</button>
   <h2>{{habit.name | uppercase}}</h2>
   <div><span>ID: </span>{{habit.id}}</div>
   <div>

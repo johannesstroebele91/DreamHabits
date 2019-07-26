@@ -12,12 +12,16 @@ import {MaterialModule} from './material/material.module';
 import { HabitsComponent } from './habits/habits.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HabitDetailComponent } from './habit-detail/habit-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HabitsComponent,
-    HabitDetailComponent
+    HabitDetailComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
