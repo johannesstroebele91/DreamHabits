@@ -4,7 +4,7 @@
 <div *ngIf="habit" class="habit-bg">
   <!-- Display object -->
   <!-- UppercasePipe: pipe operator ( | ) -->
-  <button (click)="goBack()">go back</button>
+  <button mat-raised-button (click)="goBack()">go back</button>
   <h2>{{habit.name | uppercase}}</h2>
   <div><span>ID: </span>{{habit.id}}</div>
   <div>
@@ -16,5 +16,6 @@
     </label>
   </div>
 </div>
-<button (click)="save()">save</button>
+<br>
+<button mat-raised-button (click)="save()">save</button>
 <!--{{habit}}= wrong, because cannot show whole object -->

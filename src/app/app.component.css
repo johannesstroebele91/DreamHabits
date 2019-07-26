@@ -24,7 +24,7 @@ h1.example-app-name {
 }
 
 .mat-sidenav-content {
-  margin: 4em;
+  margin: 1em 4em 0 4em;
 }
 .example-sidenav-container {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This

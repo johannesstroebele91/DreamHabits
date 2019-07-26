@@ -17,6 +17,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from '../services/in-memory-data.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   // delcaration array
@@ -25,7 +26,8 @@ import { InMemoryDataService } from '../services/in-memory-data.service';
     HabitsComponent,
     HabitDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   // imports array
   imports: [
