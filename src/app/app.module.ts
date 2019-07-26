@@ -14,8 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HabitDetailComponent } from './habit-detail/habit-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from '../services/in-memory-data.service';
 
 @NgModule({
+  // delcaration array
   declarations: [
     AppComponent,
     HabitsComponent,
@@ -23,12 +27,20 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MessagesComponent,
     DashboardComponent
   ],
+  // imports array
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

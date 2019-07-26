@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { Habit } from '../habit';
 import { HabitService } from '../../services/habit.service';
 
-
 @Component({
   selector: 'app-habits',
   templateUrl: './habits.component.html',
@@ -40,5 +39,17 @@ export class HabitsComponent implements OnInit {
       .subscribe(habits => this.habits = habits);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.habitService.addHabit({ name } as Habit)
+      .subscribe(habit => {
+        this.habits.push(habit);
+      });
+  }
+  delete(habit: Habit): void {
+    this.habits = this.habits.filter(h => h !== habit);
+    this.habitService.deleteHabit(habit).subscribe();
+  }
 
 }
