@@ -3,15 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { HabitsComponent } from './habits/habits.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
 import { HabitDetailComponent} from './habit-detail/habit-detail.component';
+import { HomeComponent } from './home/home.component';
 
 /* Setting a route:
 * path: is the path in the URL
 * component: which component will be displayed if user navigated to the path */
 const routes: Routes = [
-  {path: 'habits', component: HabitsComponent},
+  {path: '', component: HomeComponent},
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'dashboard', redirectTo: '/dashboard', pathMatch: 'full'},
-  { path: 'detail/:id', component: HabitDetailComponent}
+  {path: 'detail/:id', component: HabitDetailComponent},
+  {path: 'habits', component: HabitsComponent}
 ];
 
 @NgModule({
