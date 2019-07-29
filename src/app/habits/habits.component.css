@@ -70,3 +70,6 @@ button.delete {
   background-color: gray !important;
   color: white;
 }
+.container {
+  margin: 2em 4em 0 4em;
+}

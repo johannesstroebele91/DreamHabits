@@ -39,7 +39,7 @@ h3 {
   color: #283593;
 }
 .grid-pad {
-  padding: 10px 0;
+  padding: 2em 0;
 }
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
@@ -56,4 +56,7 @@ h3 {
   .module {
     min-width: 60px;
   }
+}
+.container {
+  margin: 2em 4em 0 4em;
 }
